@@ -1,5 +1,4 @@
 TODO /////////////////////////////
-Create repo
 Organize folders
 Interface Settings Scripts
 Scene Handling and Rocket utilites like scene loading 
@@ -11,3 +10,4 @@ Mockup mieszkania na kjubach
 
 DONE ///////////////////////////
 Odin
+Create repo
