@@ -1,0 +1,13 @@
+TODO /////////////////////////////
+Create repo
+Organize folders
+Interface Settings Scripts
+Scene Handling and Rocket utilites like scene loading 
+GitIgnore ignoring library, to allow git changes easly
+Pobraæ paczki na dysk / bezpieczne miejsce z chujlandowego dropboxa
+Gonienie kursora przez kota
+Interfejs do gonienia myszki lub dotyku
+Mockup mieszkania na kjubach
+
+DONE ///////////////////////////
+Odin
