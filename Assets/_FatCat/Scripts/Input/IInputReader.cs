@@ -3,5 +3,5 @@ using UnityEngine;
 
 public interface IInputReader : ISettingsInfo
 {
-    Vector2 InputWorldPos { get; }
+    Vector3 InputWorldPos { get; }
 }

@@ -4,22 +4,27 @@ using UnityEngine.InputSystem;
 public class MouseInputCalculator : InputCalculator
 {
     Mouse _currentMouse = null;
+    RaycastHit _hit;
+    Vector2 _inproperPosition = new Vector2(5000, 5000);
 
     public MouseInputCalculator(LayerMask mask, Mouse currentMouse) : base(mask)
     {
         _currentMouse = currentMouse;
     }
 
-    public override Vector2 CalculatePosition()
+    public override Vector3 CalculatePosition()
     {
         var mousePos = _currentMouse.position.ReadValue();
+        var ray = Camera.main.ScreenPointToRay(mousePos);
 
-        // If over UI, bail or give improper position?
-
-        // Raycast for the floor position
-
-        // Return raycast hit floor position
-
-        return mousePos;
+        if(Physics.Raycast(ray, out _hit, Mathf.Infinity, _mask))
+        {
+            return _hit.point;
+        }
+        else
+        {
+            // we should return some kind of WRONG position, so that we know that it is invalid...
+            return _inproperPosition;
+        }
     }
 }

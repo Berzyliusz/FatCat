@@ -9,5 +9,5 @@ public abstract class InputCalculator
         _mask = mask;
     }
 
-    public abstract Vector2 CalculatePosition();
+    public abstract Vector3 CalculatePosition();
 }

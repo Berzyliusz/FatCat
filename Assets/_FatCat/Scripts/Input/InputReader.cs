@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class InputReader : MonoBehaviour, IInputReader
 {
-    public Vector2 InputWorldPos => _calculatedWorldPosition;
+    [SerializeField] LayerMask _floorLayer = new LayerMask();
+    public Vector3 InputWorldPos => _calculatedWorldPosition;
 
     [ShowInInspector]
     [ReadOnly]
-    Vector2 _calculatedWorldPosition;
+    Vector3 _calculatedWorldPosition;
     InputCalculator _inputCalculator = null;
 
     private void Awake()
@@ -22,7 +23,7 @@ public class InputReader : MonoBehaviour, IInputReader
     private void InitInputCalculator()
     {
 #if UNITY_EDITOR
-        _inputCalculator = new MouseInputCalculator();
+        _inputCalculator = new MouseInputCalculator(_floorLayer, UnityEngine.InputSystem.Mouse.current);
 #endif
 
 #if UNITY_ANDROID && !UNITY_EDITOR
