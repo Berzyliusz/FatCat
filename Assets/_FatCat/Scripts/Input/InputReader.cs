@@ -1,4 +1,5 @@
 using InterfaceHolder;
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class InputReader : MonoBehaviour, IInputReader
 {
     public Vector2 InputWorldPos => _calculatedWorldPosition;
 
+    [ShowInInspector]
+    [ReadOnly]
     Vector2 _calculatedWorldPosition;
     InputCalculator _inputCalculator = null;
 
