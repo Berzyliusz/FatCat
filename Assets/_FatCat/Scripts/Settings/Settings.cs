@@ -1,6 +1,6 @@
 using Sirenix.OdinInspector;
 
-namespace ChoojlandGames
+namespace InterfaceHolder
 {
     public abstract class Settings<T, T1> : SerializedScriptableObject, ISettings<T, T1> where T : Settings<T, T1> where T1 : ISettingsInfo
     {

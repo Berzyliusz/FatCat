@@ -1,4 +1,4 @@
-namespace ChoojlandGames
+namespace InterfaceHolder
 {
     public interface ISettingsInfo
     {

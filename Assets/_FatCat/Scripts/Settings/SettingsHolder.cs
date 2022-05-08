@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ChoojlandGames
+namespace InterfaceHolder
 {
     public abstract class SettingsHolder : ScriptableObject, ISettingsHolder
     {
