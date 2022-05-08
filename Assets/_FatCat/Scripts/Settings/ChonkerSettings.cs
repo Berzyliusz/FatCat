@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace InterfaceHolder
 {
-    [CreateAssetMenu(fileName = "RocketSettings", menuName = "Settings/RocketSettings")]
+    [CreateAssetMenu(fileName = "ChonkerSettings", menuName = "Settings/ChonkerSettings")]
     public class ChonkerSettings : Settings<ChonkerSettings, ISettingsInfo>
     {
         protected Dictionary<Type, ISettingsInfo> _settingsInfoDict = new Dictionary<Type, ISettingsInfo>();

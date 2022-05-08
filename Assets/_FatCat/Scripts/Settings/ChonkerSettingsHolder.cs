@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace InterfaceHolder
 {
-    [CreateAssetMenu(fileName = "RocketSettingsHolder", menuName = "Settings/RocketSettingsHolder")]
+    [CreateAssetMenu(fileName = "ChonkerSettingsHolder", menuName = "Settings/ChonkerSettingsHolder")]
     public class ChonkerSettingsHolder : SettingsHolder
     {
         private static bool _setOnce = false;
@@ -19,8 +19,8 @@ namespace InterfaceHolder
                     GameObject settingsSupplierGO = new GameObject("SettingsSupplier");
                     _settingsSupplier = settingsSupplierGO.AddComponent<ChonkerSettingsSupplier>();
                     DontDestroyOnLoad(settingsSupplierGO);
-                    ChonkerSettingsHolder rocketSettingsHolder = Resources.Load<ChonkerSettingsHolder>(typeof(ChonkerSettingsHolder).Name);
-                    _settingsSupplier.SetSettingsHolder(rocketSettingsHolder);
+                    ChonkerSettingsHolder chonkerSettingsHolder = Resources.Load<ChonkerSettingsHolder>(typeof(ChonkerSettingsHolder).Name);
+                    _settingsSupplier.SetSettingsHolder(chonkerSettingsHolder);
                     _setOnce = true;
                 }
 
