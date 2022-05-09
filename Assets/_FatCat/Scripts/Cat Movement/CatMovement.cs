@@ -4,7 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatMovement : MonoBehaviour
+public interface ICatMovement : ISettingsInfo
+{
+    Vector3 CatPosition { get; }
+    //Vector3 CatForward { get; }
+    Vector3 CatVelocity { get; }
+}
+
+public class CatMovement : MonoBehaviour, ICatMovement
 {
     [SerializeField] float _movementSpeed = 1.0f;
     [SerializeField] float _rotationSpeed = 1.0f;
@@ -12,11 +19,17 @@ public class CatMovement : MonoBehaviour
     Transform _myTransform = null;
     Rigidbody _rb = null;
     IInputReader _inputReader = null;
+    Vector3 _directionToTarget = Vector3.zero;
+
+    public Vector3 CatPosition => _myTransform.position;
+    public Vector3 CatVelocity => _rb.velocity;
 
     private void Awake()
     {
         _myTransform = this.transform;
         _rb = this.GetComponent<Rigidbody>();
+
+        ChonkerSettingsHolder.CurrentSettings.RegisterInterface<ICatMovement>(this);
     }
 
     private void Start()
@@ -31,10 +44,10 @@ public class CatMovement : MonoBehaviour
 
         var pos = _inputReader.InputWorldPos;
         var flatPos = new Vector3(pos.x, transform.position.y, pos.z);
-        var directionToTarget = flatPos - _myTransform.position;
+        _directionToTarget = flatPos - _myTransform.position;
 
-        RotateToPointer(directionToTarget);
-        MoveForward(directionToTarget);
+        RotateToPointer(_directionToTarget);
+        MoveForward(_directionToTarget);
     }
 
     private void RotateToPointer(Vector3 directionToTarget)
@@ -48,8 +61,9 @@ public class CatMovement : MonoBehaviour
 
     private void MoveForward(Vector3 directionToTarget)
     {
-        var relativeForce = directionToTarget.normalized * _movementSpeed * Time.deltaTime;
-        _rb.AddRelativeForce(relativeForce);
+        var relativeForce = _myTransform.forward.normalized * _movementSpeed * Time.deltaTime;
+        //_rb.AddRelativeForce(relativeForce, ForceMode.Force);
+        _rb.AddForce(relativeForce, ForceMode.Force);
     }
 
 #if UNITY_EDITOR
@@ -61,7 +75,7 @@ public class CatMovement : MonoBehaviour
         Gizmos.DrawSphere(_inputReader.InputWorldPos, 0.2f);
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(_myTransform.position, _myTransform.forward);
+        Gizmos.DrawLine(_myTransform.position, _directionToTarget);
     }
 #endif
 }
