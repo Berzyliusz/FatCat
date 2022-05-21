@@ -8,30 +8,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
-    x: 1137
-    y: 307
-    width: 647
-    height: 574
-  m_ShowMode: 0
-  m_Title: Test Runner
-  m_RootView: {fileID: 4}
-  m_MinSize: {x: 100, y: 121}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
---- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -43,62 +19,12 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 5}
+  m_Title: Inspector
+  m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 647
-    height: 574
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 647
-    height: 574
-  m_MinSize: {x: 100, y: 121}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 168
---- !u!114 &5
+--- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,9 +37,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 8}
-  - {fileID: 7}
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -126,7 +52,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &6
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &7
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,7 +95,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &8
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,8 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 14}
+  - {fileID: 6}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -193,8 +119,8 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 141
---- !u!114 &9
+  controlID: 5301
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,19 +133,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 7}
   - {fileID: 10}
-  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1955
+    width: 1784
     height: 1307
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 147
---- !u!114 &10
+  controlID: 5278
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,19 +158,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 11}
-  - {fileID: 12}
+  - {fileID: 8}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1955
+    width: 1784
     height: 775
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 148
---- !u!114 &11
+  controlID: 5279
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,16 +187,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 487
+    width: 443
     height: 775
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,20 +211,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 487
+    x: 443
     y: 0
-    width: 1468
+    width: 1341
     height: 775
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 20}
-  - {fileID: 18}
-  - {fileID: 21}
+  - {fileID: 16}
+  - {fileID: 14}
+  - {fileID: 17}
   m_Selected: 1
   m_LastSelected: 0
---- !u!114 &13
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,16 +241,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 775
-    width: 1955
+    width: 1784
     height: 532
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &14
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,19 +263,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 15}
-  - {fileID: 16}
+  - {fileID: 12}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
-    x: 1955
+    x: 1784
     y: 0
-    width: 605
+    width: 776
     height: 1307
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 142
---- !u!114 &15
+  controlID: 5302
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,16 +292,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 605
-    height: 871
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 23}
+    width: 776
+    height: 671
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &16
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -385,277 +311,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 871
-    width: 605
-    height: 436
+    y: 671
+    width: 776
+    height: 636
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 24}
-  m_Selected: 0
+  - {fileID: 20}
+  - {fileID: 21}
+  m_Selected: 1
   m_LastSelected: 0
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1137
-    y: 307
-    width: 647
-    height: 553
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_Spl:
-    ID: 198
-    splitterInitialOffset: 0
-    currentActiveSplitter: -1
-    realSizes:
-    - 362
-    - 121
-    relativeSizes:
-    - 0.75
-    - 0.25
-    minSizes:
-    - 32
-    - 32
-    maxSizes:
-    - 0
-    - 0
-    lastTotalSize: 483
-    splitSize: 6
-    xOffset: 0
-    m_Version: 1
-    oldRealSizes: 
-    oldMinSizes: 
-    oldMaxSizes: 
-    oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 0}
-    m_NewResultList: []
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories: []
-    m_SelectedOption: 0
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 17}
-    m_NewResultList:
-    - id: 1000
-      uniqueId: '[Fat Cat][suite]'
-      name: Fat Cat
-      fullName: Fat Cat
-      resultStatus: 1
-      duration: 0.0551828
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1006
-      uniqueId: '[Tests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll][suite]'
-      name: Tests.dll
-      fullName: E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.0289448
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Fat Cat][suite]'
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][inventory][suite]
-      name: inventory
-      fullName: inventory
-      resultStatus: 1
-      duration: 0.0220299
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1006
-      parentUniqueId: '[Tests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1002
-      uniqueId: Tests.dll/inventory/[Tests][inventory.only_allows_one_chest_to_be_equipped_at_a_time]
-      name: only_allows_one_chest_to_be_equipped_at_a_time
-      fullName: inventory.only_allows_one_chest_to_be_equipped_at_a_time
-      resultStatus: 1
-      duration: 0.0116953
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][inventory][suite]
-    - id: 1005
-      uniqueId: Tests.dll/[Tests][Test][suite]
-      name: Test
-      fullName: Test
-      resultStatus: 1
-      duration: 0.0056325
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1004
-      parentUniqueId: '[Tests.dll][suite]'
-    - id: 1001
-      uniqueId: Tests.dll/Test/[Tests][Test.damage_calculator][suite]
-      name: damage_calculator
-      fullName: Test.damage_calculator
-      resultStatus: 1
-      duration: 0.0023138
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1005
-      parentUniqueId: Tests.dll/[Tests][Test][suite]
-    - id: 1003
-      uniqueId: Tests.dll/Test/damage_calculator/[Tests][Test.damage_calculator.calculates_2_damage_from_10_with_80_percent_mitigation]
-      name: calculates_2_damage_from_10_with_80_percent_mitigation
-      fullName: Test.damage_calculator.calculates_2_damage_from_10_with_80_percent_mitigation
-      resultStatus: 1
-      duration: 0.0014185
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/Test/[Tests][Test.damage_calculator][suite]
-    - id: 1002
-      uniqueId: Tests.dll/Test/damage_calculator/[Tests][Test.damage_calculator.sets_damage_to_half_with_50_percent_mitigation]
-      name: sets_damage_to_half_with_50_percent_mitigation
-      fullName: Test.damage_calculator.sets_damage_to_half_with_50_percent_mitigation
-      resultStatus: 1
-      duration: 0.0001085
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/Test/[Tests][Test.damage_calculator][suite]
-    m_ResultText: calculates_2_damage_from_10_with_80_percent_mitigation (0,001s)
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e1df2b9
-      m_LastClickedID: -1175315106
-      m_ExpandedIDs: 6bd22f926ae347dce557abf712506600bfb72426cbd4297affffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
---- !u!114 &18
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -676,9 +349,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 487
+    x: 443
     y: 73
-    width: 1466
+    width: 1339
     height: 754
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -690,11 +363,11 @@ MonoBehaviour:
   m_ShowGizmos: 1
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1466, y: 733}
+  m_TargetSize: {x: 1339, y: 733}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 1
+  m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 1
@@ -705,8 +378,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -733
-    m_HBaseRangeMax: 733
+    m_HBaseRangeMin: -669.5
+    m_HBaseRangeMax: 669.5
     m_VBaseRangeMin: -366.5
     m_VBaseRangeMax: 366.5
     m_HAllowExceedBaseRangeMin: 1
@@ -726,29 +399,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1466
+      width: 1339
       height: 733
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 733, y: 366.5}
+    m_Translation: {x: 669.5, y: 366.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -733
+      x: -669.5
       y: -366.5
-      width: 1466
+      width: 1339
       height: 733
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1466, y: 754}
+  m_LastWindowPixelSize: {x: 1339, y: 754}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &19
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -771,7 +444,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 486
+    width: 442
     height: 754
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -780,9 +453,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f85b0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: cca5ffff10bcffffbcbfffffecc2fffff6c5ffff22c9ffff40ccffffaeceffff2ad3ffff42d6ffff36dbffffaeddffff28e0ffff34e3ffff9ee5ffffb6e8ffff38ebffff30fbffff
+      m_ExpandedIDs: e09affff1e9bffff749cffff629fffffa09fffffe0a0ffffa8a5ffffe6a5ffff66a7ffffd8a9ffff16aaffff8cabffff58b0ffff96b0ffff1ab2ffff0cb5ffff4ab5ffffbab5ffff46c1ffff68c4ffff7ec7ffffa6d1ffff4ed4ffff12e3ffff4ee6ffff6ae9ffff60f6ffff30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -798,7 +471,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 11}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -806,7 +479,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &20
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,9 +500,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 487
+    x: 443
     y: 73
-    width: 1466
+    width: 1339
     height: 754
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1032,9 +705,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.32267767, y: -0.87953794, z: -0.26222724}
+    m_Target: {x: 0.8085251, y: -0.8526497, z: -0.2735603}
     speed: 2
-    m_Value: {x: 0.32267767, y: -0.87953794, z: -0.26222724}
+    m_Value: {x: 0.8085251, y: -0.8526497, z: -0.2735603}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1081,9 +754,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.00031386237, y: -0.85676044, z: 0.5156807, w: 0.0005166506}
+    m_Target: {x: -0.04110134, y: -0.85629714, z: 0.5101671, w: -0.068992615}
     speed: 2
-    m_Value: {x: 0.00031386781, y: -0.8567753, z: 0.5156896, w: 0.0005166596}
+    m_Value: {x: -0.04110207, y: -0.85631233, z: 0.5101762, w: -0.06899384}
   m_Size:
     m_Target: 3.1638598
     speed: 2
@@ -1112,7 +785,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &21
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1178,7 +851,7 @@ MonoBehaviour:
   m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &22
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1201,7 +874,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 848
-    width: 1954
+    width: 1783
     height: 511
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1220,22 +893,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UnitTestingScripts
+    - Assets/PlayTests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 16
+  m_StartGridSize: 96
   m_LastFolders:
-  - Assets/UnitTestingScripts
-  m_LastFoldersGridSize: 16
+  - Assets/PlayTests
+  m_LastFoldersGridSize: 96
   m_LastProjectPath: E:\Moje Projekty\Fat Cat\FatCat
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 25}
-    m_SelectedIDs: e2530000
-    m_LastClickedID: 21474
-    m_ExpandedIDs: 000000003e52000040520000425200004452000046520000485200004a5200004c5200005452000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: cc580000
+    m_LastClickedID: 22732
+    m_ExpandedIDs: 0000000054520000585200005a5200005c5200005e52000060520000625200002e53000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1263,7 +936,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003e52000040520000425200004452000046520000485200004a5200004c520000
+    m_ExpandedIDs: 0000000054520000585200005a5200005c5200005e520000605200006252000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1290,7 +963,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1316,10 +989,10 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 16
+    m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &23
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1340,10 +1013,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1955
+    x: 1784
     y: 73
-    width: 604
-    height: 850
+    width: 775
+    height: 650
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1361,7 +1034,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &24
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1382,11 +1055,381 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1955
-    y: 944
-    width: 604
-    height: 415
+    x: 1784
+    y: 744
+    width: 775
+    height: 615
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1784
+    y: 744
+    width: 775
+    height: 615
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 5311
+    splitterInitialOffset: 246
+    currentActiveSplitter: -1
+    realSizes:
+    - 175
+    - 370
+    relativeSizes:
+    - 0.32110092
+    - 0.67889905
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 545
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 21}
+    m_NewResultList:
+    - id: 1042
+      uniqueId: '[Fat Cat][suite]'
+      name: Fat Cat
+      fullName: Fat Cat
+      resultStatus: 1
+      duration: 0.4305201
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1003
+      uniqueId: '[PlayTests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/PlayTests.dll][suite]'
+      name: PlayTests.dll
+      fullName: E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/PlayTests.dll
+      resultStatus: 1
+      duration: 0.3370601
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Fat Cat][suite]'
+    - id: 1001
+      uniqueId: PlayTests.dll/[PlayTests][player_movement][suite]
+      name: player_movement
+      fullName: player_movement
+      resultStatus: 1
+      duration: 0.332138
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1003
+      parentUniqueId: '[PlayTests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/PlayTests.dll][suite]'
+    - id: 1002
+      uniqueId: PlayTests.dll/player_movement/[PlayTests][player_movement.witch_positive_vertical_input_moves_forward]
+      name: witch_positive_vertical_input_moves_forward
+      fullName: player_movement.witch_positive_vertical_input_moves_forward
+      resultStatus: 1
+      duration: 0.3195043
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: PlayTests.dll/[PlayTests][player_movement][suite]
+    m_ResultText: PlayTests.dll (0,337s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 12de55eb
+      m_LastClickedID: -346694126
+      m_ExpandedIDs: bfb72426ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 21}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[Fat Cat][suite]'
+      name: Fat Cat
+      fullName: Fat Cat
+      resultStatus: 1
+      duration: 0.1823452
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1006
+      uniqueId: '[Tests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll][suite]'
+      name: Tests.dll
+      fullName: E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 1
+      duration: 0.1517008
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Fat Cat][suite]'
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][character_witch_inventory][suite]
+      name: character_witch_inventory
+      fullName: character_witch_inventory
+      resultStatus: 1
+      duration: 0.1265386
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1008
+      parentUniqueId: '[Tests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1002
+      uniqueId: Tests.dll/character_witch_inventory/[Tests][character_witch_inventory.with_90_armor_takes_10_percent_damage]
+      name: with_90_armor_takes_10_percent_damage
+      fullName: character_witch_inventory.with_90_armor_takes_10_percent_damage
+      resultStatus: 1
+      duration: 0.1149542
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][character_witch_inventory][suite]
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][inventory][suite]
+      name: inventory
+      fullName: inventory
+      resultStatus: 1
+      duration: 0.0142874
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[Tests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1002
+      uniqueId: Tests.dll/inventory/[Tests][inventory.only_allows_one_chest_to_be_equipped_at_a_time]
+      name: only_allows_one_chest_to_be_equipped_at_a_time
+      fullName: inventory.only_allows_one_chest_to_be_equipped_at_a_time
+      resultStatus: 1
+      duration: 0.0012293
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][inventory][suite]
+    - id: 1005
+      uniqueId: Tests.dll/inventory/[Tests][inventory.tells_character_when_an_item_is_equipped_succsessfully]
+      name: tells_character_when_an_item_is_equipped_succsessfully
+      fullName: inventory.tells_character_when_an_item_is_equipped_succsessfully
+      resultStatus: 1
+      duration: 0.0041034
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: Tests.dll/[Tests][inventory][suite]
+    - id: 1007
+      uniqueId: Tests.dll/[Tests][Test][suite]
+      name: Test
+      fullName: Test
+      resultStatus: 1
+      duration: 0.0091955
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1006
+      parentUniqueId: '[Tests][E:/Moje Projekty/Fat Cat/FatCat/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1003
+      uniqueId: Tests.dll/Test/[Tests][Test.damage_calculator][suite]
+      name: damage_calculator
+      fullName: Test.damage_calculator
+      resultStatus: 1
+      duration: 0.0035268
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: Tests.dll/[Tests][Test][suite]
+    - id: 1005
+      uniqueId: Tests.dll/Test/damage_calculator/[Tests][Test.damage_calculator.calculates_2_damage_from_10_with_80_percent_mitigation]
+      name: calculates_2_damage_from_10_with_80_percent_mitigation
+      fullName: Test.damage_calculator.calculates_2_damage_from_10_with_80_percent_mitigation
+      resultStatus: 1
+      duration: 0.0004404
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: Tests.dll/Test/[Tests][Test.damage_calculator][suite]
+    - id: 1004
+      uniqueId: Tests.dll/Test/damage_calculator/[Tests][Test.damage_calculator.sets_damage_to_half_with_50_percent_mitigation]
+      name: sets_damage_to_half_with_50_percent_mitigation
+      fullName: Test.damage_calculator.sets_damage_to_half_with_50_percent_mitigation
+      resultStatus: 1
+      duration: 0.0001284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: Tests.dll/Test/[Tests][Test.damage_calculator][suite]
+    m_ResultText: Fat Cat (0,182s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: bfb72426
+      m_LastClickedID: 639940543
+      m_ExpandedIDs: 6bd22f926ae347dc0b61d9fe12506600bfb72426cbd4297affffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
