@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using NSubstitute;
+using NUnit.Framework;
 
 public class character_witch_inventory
 {
@@ -6,15 +7,15 @@ public class character_witch_inventory
     public void with_90_armor_takes_10_percent_damage()
     {
         // ARRANGE
-        Character character = new Character();
-        Inventory inventory = new Inventory();
+        ICharacter character = Substitute.For<ICharacter>();
+        Inventory inventory = new Inventory(character);
         Item pants = new Item() { EquipSlot = EquipSlots.Legs, Armor = 40 };
         Item shield = new Item() { EquipSlot = EquipSlots.RightHand, Armor = 50 };
 
         inventory.EquipItem(pants);
         inventory.EquipItem(shield);
 
-        character.Inventory = inventory;
+        character.Inventory.Returns(inventory);
 
         // ACT
         int calculatedDamage = DamageCalculator.CalculateDamage(1000, character);

@@ -5,6 +5,12 @@ public class Inventory
 {
     Dictionary<EquipSlots, Item> _equippedItems = new Dictionary<EquipSlots, Item>();
     List<Item> _unequippedItems = new List<Item>();
+    private readonly ICharacter _character;
+
+    public Inventory(ICharacter character)
+    {
+        _character = character;
+    }
 
     public void EquipItem(Item item)
     {
@@ -12,6 +18,7 @@ public class Inventory
             _unequippedItems.Add(_equippedItems[item.EquipSlot]);
 
         _equippedItems[item.EquipSlot] = item;
+        _character.OnItemEquipped(item);
     }
 
     public Item GetItem(EquipSlots equipSlot)
