@@ -7,20 +7,14 @@ using NSubstitute;
 
 public class InputTests
 {
-    // A Test behaves as an ordinary method
     [Test]
-    public void InputTestsSimplePasses()
+    public void MouseInput_ReturnsWrongPosition_WhenCantHit()
     {
-        // Use the Assert class to test conditions
-    }
+        //ARRANGE
+        //var mousePosCalculator = new MouseInputCalculator(null, null);
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator InputTestsWithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        //ACT
+
+        //ASSERT
     }
 }
