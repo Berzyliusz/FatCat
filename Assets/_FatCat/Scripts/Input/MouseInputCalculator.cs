@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 
 public class MouseInputCalculator : InputCalculator
 {
-    Mouse _currentMouse = null;
-    RaycastHit _hit;
-    Vector2 _inproperPosition = new Vector2(5000, 5000);
+    private Mouse _currentMouse = null;
+    private RaycastHit _hit;
+    private Vector2 _inproperPosition = new Vector2(5000, 5000);
 
     public MouseInputCalculator(LayerMask mask, Mouse currentMouse) : base(mask)
     {
@@ -14,6 +14,11 @@ public class MouseInputCalculator : InputCalculator
 
     public override Vector3 CalculatePosition()
     {
+        if(_currentMouse == null)
+        {
+            return _inproperPosition;
+        }
+
         var mousePos = _currentMouse.position.ReadValue();
         var ray = Camera.main.ScreenPointToRay(mousePos);
 

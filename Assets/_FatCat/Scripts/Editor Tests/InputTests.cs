@@ -11,10 +11,12 @@ public class InputTests
     public void MouseInput_ReturnsWrongPosition_WhenCantHit()
     {
         //ARRANGE
-        //var mousePosCalculator = new MouseInputCalculator(null, null);
+        var mousePosCalculator = new MouseInputCalculator(new LayerMask(), null);
 
         //ACT
+        Vector2 calculatedPosition = mousePosCalculator.CalculatePosition();
 
         //ASSERT
+        Assert.AreEqual(new Vector2(5000, 5000), calculatedPosition);
     }
 }
