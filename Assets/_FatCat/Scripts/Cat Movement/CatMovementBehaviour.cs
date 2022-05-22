@@ -8,7 +8,24 @@ public interface ICatMovement : ISettingsInfo
     Vector3 CatVelocity { get; }
 }
 
-public class CatMovement : MonoBehaviour, ICatMovement
+public class CatMovement
+{
+    Rigidbody _rb = null;
+    Transform _transform = null;
+
+    public CatMovement(Rigidbody rb, Transform transform)
+    {
+        _rb = rb;
+        _transform = transform;
+    }
+
+    public void OnTick(float deltaTime, )
+    {
+
+    }
+}
+
+public class CatMovementBehaviour : MonoBehaviour, ICatMovement
 {
     [SerializeField] float _movementSpeed = 1.0f;
     [SerializeField] float _rotationSpeed = 1.0f;
@@ -18,6 +35,7 @@ public class CatMovement : MonoBehaviour, ICatMovement
     IInputReader _inputReader = null;
     Vector3 _directionToTarget = Vector3.zero;
     CatCollisionProcessor _collisionProcessor = null;
+    CatMovement _catMovement = null;
 
     public Vector3 CatPosition => _myTransform.position;
     public Vector3 CatVelocity => _rb.velocity;
@@ -26,8 +44,9 @@ public class CatMovement : MonoBehaviour, ICatMovement
     {
         _myTransform = this.transform;
         _rb = this.GetComponent<Rigidbody>();
+        _collisionProcessor = new(_rb);
+        _catMovement = new(_rb, _myTransform);
 
-        _collisionProcessor = new CatCollisionProcessor(_rb);
         ChonkerSettingsHolder.CurrentSettings.RegisterInterface<ICatMovement>(this);
     }
 
