@@ -7,6 +7,11 @@ public class Timer
     public Timer(float duration)
     {
         RemainingSeconds = duration;
+
+        if (duration <= 0.0f)
+        {
+            CheckForTimerEnd();
+        }
     }
 
     public event Action OnTimerEnd;
