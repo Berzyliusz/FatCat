@@ -4,16 +4,18 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using NSubstitute;
+using UnityEngine.InputSystem;
 
 public class InputTests
 {
     [Test]
-    public void MouseInput_ReturnsWrongPosition_WhenCantHit()
+    public void MouseInput_ReturnsWrongPosition_WhenMouseIsNull()
     {
         //ARRANGE
         var mousePosCalculator = new MouseInputCalculator(new LayerMask(), null);
 
         //ACT
+
         Vector2 calculatedPosition = mousePosCalculator.CalculatePosition();
 
         //ASSERT

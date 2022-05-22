@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class MouseSpawner : MonoBehaviour
+﻿public class MouseSpawner
 {
-    // Spawn mice over time from some predesignated areas
+    public MouseSpawner()
+    {
+        // We need mouse spawning plan
+        // amount
+        // time intervals
+        // start points
+    }
 }
