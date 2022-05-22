@@ -17,6 +17,7 @@ public class CatMovementBehaviour : MonoBehaviour, ICatMovement
     Rigidbody _rb = null;
     IInputReader _inputReader = null;
     Vector3 _directionToTarget = Vector3.zero;
+
     CatCollisionProcessor _collisionProcessor = null;
     CatMovement _catMovement = null;
 
@@ -27,6 +28,7 @@ public class CatMovementBehaviour : MonoBehaviour, ICatMovement
     {
         _myTransform = this.transform;
         _rb = this.GetComponent<Rigidbody>();
+
         _collisionProcessor = new(_rb);
         _catMovement = new(_rb, _myTransform, _movementSpeed, _rotationSpeed);
 
