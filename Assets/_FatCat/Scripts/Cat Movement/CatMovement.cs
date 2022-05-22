@@ -17,6 +17,7 @@ public class CatMovement : MonoBehaviour, ICatMovement
     Rigidbody _rb = null;
     IInputReader _inputReader = null;
     Vector3 _directionToTarget = Vector3.zero;
+    CatCollisionProcessor _collisionProcessor = null;
 
     public Vector3 CatPosition => _myTransform.position;
     public Vector3 CatVelocity => _rb.velocity;
@@ -26,6 +27,7 @@ public class CatMovement : MonoBehaviour, ICatMovement
         _myTransform = this.transform;
         _rb = this.GetComponent<Rigidbody>();
 
+        _collisionProcessor = new CatCollisionProcessor(_rb);
         ChonkerSettingsHolder.CurrentSettings.RegisterInterface<ICatMovement>(this);
     }
 
@@ -44,10 +46,10 @@ public class CatMovement : MonoBehaviour, ICatMovement
         _directionToTarget = flatPos - _myTransform.position;
 
         RotateToPointer(_directionToTarget);
-        MoveForward(_directionToTarget);
+        MoveForward();
     }
 
-    private void RotateToPointer(Vector3 directionToTarget)
+    private void RotateToPointer(Vector3 directionToTarget) //TODO: Move to POCO
     {
         var targetRotation = Quaternion.LookRotation(directionToTarget);
 
@@ -56,11 +58,16 @@ public class CatMovement : MonoBehaviour, ICatMovement
         //_rb.freezeRotation = false;
     }
 
-    private void MoveForward(Vector3 directionToTarget)
+    private void MoveForward() //TODO: Move to POCO
     {
         var relativeForce = _myTransform.forward.normalized * _movementSpeed * Time.deltaTime;
         //_rb.AddRelativeForce(relativeForce, ForceMode.Force);
         _rb.AddForce(relativeForce, ForceMode.Force);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _collisionProcessor.HandleCollision(collision);
     }
 
 #if UNITY_EDITOR
