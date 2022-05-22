@@ -8,23 +8,6 @@ public interface ICatMovement : ISettingsInfo
     Vector3 CatVelocity { get; }
 }
 
-public class CatMovement
-{
-    Rigidbody _rb = null;
-    Transform _transform = null;
-
-    public CatMovement(Rigidbody rb, Transform transform)
-    {
-        _rb = rb;
-        _transform = transform;
-    }
-
-    public void OnTick(float deltaTime, )
-    {
-
-    }
-}
-
 public class CatMovementBehaviour : MonoBehaviour, ICatMovement
 {
     [SerializeField] float _movementSpeed = 1.0f;
@@ -45,7 +28,7 @@ public class CatMovementBehaviour : MonoBehaviour, ICatMovement
         _myTransform = this.transform;
         _rb = this.GetComponent<Rigidbody>();
         _collisionProcessor = new(_rb);
-        _catMovement = new(_rb, _myTransform);
+        _catMovement = new(_rb, _myTransform, _movementSpeed, _rotationSpeed);
 
         ChonkerSettingsHolder.CurrentSettings.RegisterInterface<ICatMovement>(this);
     }
@@ -60,28 +43,7 @@ public class CatMovementBehaviour : MonoBehaviour, ICatMovement
         // check if mouse is properly placed, allow moving there
         // check if can move, collision or something?
 
-        var pos = _inputReader.InputWorldPos;
-        var flatPos = new Vector3(pos.x, transform.position.y, pos.z);
-        _directionToTarget = flatPos - _myTransform.position;
-
-        RotateToPointer(_directionToTarget);
-        MoveForward();
-    }
-
-    private void RotateToPointer(Vector3 directionToTarget) //TODO: Move to POCO
-    {
-        var targetRotation = Quaternion.LookRotation(directionToTarget);
-
-        //_rb.freezeRotation = true;
-        _myTransform.rotation = Quaternion.Slerp(_myTransform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
-        //_rb.freezeRotation = false;
-    }
-
-    private void MoveForward() //TODO: Move to POCO
-    {
-        var relativeForce = _myTransform.forward.normalized * _movementSpeed * Time.deltaTime;
-        //_rb.AddRelativeForce(relativeForce, ForceMode.Force);
-        _rb.AddForce(relativeForce, ForceMode.Force);
+        _catMovement.OnTick(Time.deltaTime, _inputReader.InputWorldPos);
     }
 
     private void OnCollisionEnter(Collision collision)
