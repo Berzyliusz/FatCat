@@ -8,14 +8,13 @@ namespace Utilities.Timer
     {
         public bool IsPaused { get; private set; }
 
-        private TimerHandleUpdater _updater = null;
         Action _callback;
         Action<TimerHandle> _internalCallback;
 
         public TimerHandle(float duration, TimerHandleUpdater updater, Action externalCallback, Action<TimerHandle> internalCallback)
         {
             RemainingTime = duration;
-            _updater.AddCallbackListener(Tick);
+            updater.AddCallbackListener(Tick);
             _callback = externalCallback;
             _internalCallback = internalCallback;
         }
@@ -103,6 +102,6 @@ namespace Utilities.Timer
             return handle;
         }
 
-        public static void UnregisterHandle(TimerHandle handleToUnregister) => _timerHandles.Remove(handleToUnregister);
+        private static void UnregisterHandle(TimerHandle handleToUnregister) => _timerHandles.Remove(handleToUnregister);
     }
 }
