@@ -24,7 +24,6 @@ namespace Utilities.Timer
                     _tickCallbacks.RemoveAt(i);
                     i--;
                 }
-
                 _tickCallbacks[i](Time.deltaTime);
             }
         }
