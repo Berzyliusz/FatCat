@@ -6,7 +6,7 @@ namespace Utilities.Timer
 {
     public static class Timer
     {
-        private static TimerHandleUpdater _updater;
+        private static ITimerUpdater _updater;
         private static HashSet<TimerHandle> _timerHandles = new();
 
         public static void CancelAllTimers()
@@ -25,12 +25,26 @@ namespace Utilities.Timer
 
         public static void PauseAllTimers()
         {
-
+            foreach (var handle in _timerHandles)
+            {
+                if (handle == null)
+                {
+                    continue;
+                }
+                handle.PauseTimer();
+            }
         }
 
         public static void ResumeAllTimers()
         {
-
+            foreach (var handle in _timerHandles)
+            {
+                if (handle == null)
+                {
+                    continue;
+                }
+                handle.ResumeTimer();
+            }
         }
 
         public static TimerHandle SetTimer(Action callback, float duration)
@@ -41,7 +55,6 @@ namespace Utilities.Timer
                 _updater = go.AddComponent<TimerHandleUpdater>();
             }
 
-            Debug.Log($"Creating timer for {duration}");
             TimerHandle handle = new(duration, _updater, callback, UnregisterHandle);
             _timerHandles.Add(handle);
             return handle;

@@ -4,7 +4,13 @@ using UnityEngine;
 
 namespace Utilities.Timer
 {
-    public class TimerHandleUpdater : MonoBehaviour
+    public interface ITimerUpdater
+    {
+        public void Tick(float delta);
+        public void AddCallbackListener(Action<float> callback);
+    }
+
+    public class TimerHandleUpdater : MonoBehaviour, ITimerUpdater
     {
         public TimerHandle Handle { get; set; }
 
@@ -17,14 +23,19 @@ namespace Utilities.Timer
 
         private void Update()
         {
-            for(int i = 0; i < _tickCallbacks.Count; i++)
+            Tick(Time.deltaTime);
+        }
+
+        public void Tick(float delta)
+        {
+            for (int i = 0; i < _tickCallbacks.Count; i++)
             {
-                if(_tickCallbacks[i] == null)
+                if (_tickCallbacks[i] == null)
                 {
                     _tickCallbacks.RemoveAt(i);
                     i--;
                 }
-                _tickCallbacks[i](Time.deltaTime);
+                _tickCallbacks[i](delta);
             }
         }
     }

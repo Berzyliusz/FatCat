@@ -10,9 +10,8 @@ namespace Utilities.Timer
         Action _callback;
         Action<TimerHandle> _internalCallback;
 
-        public TimerHandle(float duration, TimerHandleUpdater updater, Action externalCallback, Action<TimerHandle> internalCallback)
+        public TimerHandle(float duration, ITimerUpdater updater, Action externalCallback, Action<TimerHandle> internalCallback)
         {
-            Debug.Log($"Creating timer: " + duration);
             RemainingTime = duration;
             updater.AddCallbackListener(Tick);
             _callback = externalCallback;
@@ -23,6 +22,11 @@ namespace Utilities.Timer
 
         public void Tick(float deltaTime)
         {
+            if(IsPaused)
+            {
+                return;
+            }
+
             RemainingTime -= deltaTime;
             CheckForEndOfTimer();
         }
