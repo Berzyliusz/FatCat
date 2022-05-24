@@ -44,12 +44,16 @@ namespace Utilities.Timer
             }
 
             _callback();
-            _internalCallback(this);
+            if (_internalCallback != null)
+                _internalCallback(this);
         }
 
         public void CancelTimer()
         {
+            IsPaused = true;
 
+            if(_internalCallback != null)
+                _internalCallback(this);
         }
         
         public void PauseTimer()

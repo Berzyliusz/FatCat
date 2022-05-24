@@ -9,6 +9,7 @@ namespace Utilities.Timer
         private static ITimerUpdater _updater;
         private static HashSet<TimerHandle> _timerHandles = new();
 
+        #region Pause / Resume / Cancel utilities
         public static void CancelAllTimers()
         {
              foreach(var handle in _timerHandles)
@@ -46,6 +47,7 @@ namespace Utilities.Timer
                 handle.ResumeTimer();
             }
         }
+        #endregion
 
         public static TimerHandle SetTimer(Action callback, float duration)
         {

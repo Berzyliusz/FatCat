@@ -21,23 +21,53 @@ public class TimerTests
     [TestCase(1.0f)]
     [TestCase(3.0f)]
     [TestCase(21.37f)]
-    public void TimerIsFinishing(float duration)
+    public void TimerHasZeroRemainingTimeAfterTickingItsStartingAmount(float duration)
     {
+        // Arrange
+        var updater = Substitute.For<ITimerUpdater>();
+        TimerHandle handle = new(duration, updater, null, null);
+
+        // Act
+        handle.Tick(duration);
+
+        // Assert
+        Assert.AreEqual(0.0f, handle.RemainingTime);
 
     }
 
     [Test]
-    public void PasuedTimer_IsNotCounting()
+    [TestCase(1.0f)]
+    [TestCase(3.0f)]
+    [TestCase(21.37f)]
+    public void CanceledTimer_IsNotCounting(float duration)
     {
         // Arrange
-        var timer = Timer.SetTimer(null, 1);
-        timer.PauseTimer();
-
         var updater = Substitute.For<ITimerUpdater>();
-        
-        // We have to simulate tick here...
+        TimerHandle handle = new(duration, updater, null, null);
+
         // Act
+        handle.CancelTimer();
+        handle.Tick(1.0f);
 
         // Assert
+        Assert.AreEqual(duration, handle.RemainingTime);
+    }
+
+    [Test]
+    [TestCase(1.0f)]
+    [TestCase(3.0f)]
+    [TestCase(21.37f)]
+    public void PasuedTimer_IsNotCounting(float duration)
+    {
+        // Arrange
+        var updater = Substitute.For<ITimerUpdater>();
+        TimerHandle handle = new(duration, updater, null, null);
+        
+        // Act
+        handle.PauseTimer();
+        handle.Tick(1.0f);
+
+        // Assert
+        Assert.AreEqual(duration, handle.RemainingTime);
     }
 }
