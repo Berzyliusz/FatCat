@@ -24,4 +24,12 @@ public class AddressableMaterialLoader : AddressableBehavior
             new AddressableMaterialProcessor(addressableMat.Renderer, addressableMat.MaterialReference);
         }
     }
+
+    private void OnDestroy()
+    {
+        foreach (var addressableMat in _addressableMaterials)
+        {
+            addressableMat.Release(addressableMat.Renderer.gameObject);
+        }
+    }
 }
