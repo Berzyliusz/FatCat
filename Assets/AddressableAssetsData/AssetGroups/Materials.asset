@@ -16,7 +16,23 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 2d88b0c65967c214480698872b05fb2a
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 4a58a724a5ba9844b91b13bb188c0119
+    m_Address: ChairMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 45993d4b94607354a9fa5de775a65519
+    m_Address: TableMaterial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 866e55be5a571e14eb88eea0d916eab3
+    m_Address: ChairMaterialAlternative
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6d2fa48d3dc0e2f449321ab1fb1f5fa3
+    m_Address: TableMaterialAlternative
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c23d38f4475eb4c4e893c917c0ead44a, type: 2}
   m_SchemaSet:

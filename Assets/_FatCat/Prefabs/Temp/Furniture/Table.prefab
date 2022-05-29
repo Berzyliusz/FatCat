@@ -519,4 +519,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51448175050307c469a48472644e0274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addressableMaterials: []
+  _addressableMaterials:
+  - Renderer: {fileID: 306950677655581775}
+    MaterialReference:
+      m_AssetGUID: 6d2fa48d3dc0e2f449321ab1fb1f5fa3
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
