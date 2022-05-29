@@ -63,7 +63,7 @@ MonoBehaviour:
       - m_Id: adfc6375401696344a3d68547b040fd3
         m_Value: ServerData/[BuildTarget]
       - m_Id: d57103d779a70454cad26e307ca63639
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://chonkersaddressables.fra1.digitaloceanspaces.com[PrivateIpAddress]:[HostingServicePort]
     m_ProfileEntryNames:
     - m_Id: 356998cd30f54c7419a31200f84865cf
       m_Name: BuildTarget
