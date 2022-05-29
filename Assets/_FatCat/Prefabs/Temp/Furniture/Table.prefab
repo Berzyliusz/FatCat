@@ -519,6 +519,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51448175050307c469a48472644e0274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _addressableMaterials:
-  - Renderer: {fileID: 0}
-  - Renderer: {fileID: 0}
+  _addressableMaterials: []
