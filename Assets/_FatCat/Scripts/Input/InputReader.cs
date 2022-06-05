@@ -22,9 +22,9 @@ public class InputReader : MonoBehaviour, IInputReader
 
     private void InitInputCalculator()
     {
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
         _inputCalculator = new MouseInputCalculator(_floorLayer, UnityEngine.InputSystem.Mouse.current);
-#endif
+//#endif
 
 #if UNITY_ANDROID && !UNITY_EDITOR
         //TODO: create new touch input calculator

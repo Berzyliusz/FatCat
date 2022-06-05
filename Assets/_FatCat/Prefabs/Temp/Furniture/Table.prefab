@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a58a724a5ba9844b91b13bb188c0119, type: 2}
+  - {fileID: 2100000, guid: 45993d4b94607354a9fa5de775a65519, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -159,7 +159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a58a724a5ba9844b91b13bb188c0119, type: 2}
+  - {fileID: 2100000, guid: 45993d4b94607354a9fa5de775a65519, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -256,7 +256,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a58a724a5ba9844b91b13bb188c0119, type: 2}
+  - {fileID: 2100000, guid: 45993d4b94607354a9fa5de775a65519, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -353,7 +353,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a58a724a5ba9844b91b13bb188c0119, type: 2}
+  - {fileID: 2100000, guid: 45993d4b94607354a9fa5de775a65519, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 306950677655581775}
   - component: {fileID: 306950677655581774}
   - component: {fileID: 306950677655581762}
+  - component: {fileID: 5166784315200527524}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -455,7 +456,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a58a724a5ba9844b91b13bb188c0119, type: 2}
+  - {fileID: 2100000, guid: 45993d4b94607354a9fa5de775a65519, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -506,3 +507,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5166784315200527524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306950677655581769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51448175050307c469a48472644e0274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _addressableMaterials:
+  - Renderer: {fileID: 306950677655581775}
+    MaterialReference:
+      m_AssetGUID: 6d2fa48d3dc0e2f449321ab1fb1f5fa3
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
