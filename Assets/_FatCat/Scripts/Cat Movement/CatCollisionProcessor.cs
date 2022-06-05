@@ -17,10 +17,13 @@ public class CatCollisionProcessor
         {
             Debug.Log("Wall hit");
             // Calculate bounce strength depening on speed
-            
+
 
             // Somehow bounce AWAY from the wall
             // With strength according to the force of collision
+
+            // Example change in the code
+            this.name = "Kupa";
         }
     }
 }
